@@ -5,11 +5,12 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>이미지 보이기 및 숨기기</title>
    <style>
-      button{margin: 10px;}
+      button{margin: 10px 2px;}
+      img{display: none;}
    </style>
 </head>
 <body>
-   <button onclick="showHide()">숨기기</button>
+   <button onclick="showHide()">보이기</button>
    <div>
       <img src="images/순정명수.png" alt="순정명수" id="pic">
    </div>
@@ -24,11 +25,11 @@
       let pic = document.getElementById("pic");
       let btn = document.getElementById("btn")
       if(sw == true){
-         pic.style.display = "none";
-         btn.innerText = "보이기";
+         pic.style.display = "block";
+         btn.innerText = "숨기기";
          sw = false;
       }else{
-         pic.style.display = "block";
+         pic.style.display = "none";
          btn.innerText = "보이기";
          sw = true;
       }
