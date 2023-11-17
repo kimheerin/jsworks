@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+#container{
+   width: 600px;
+   height: 500px;
+   margin: 0 auto;
+   text-align: center;
+   position: relative;  /* 부모 기준 */
+}
+
+/* button{float: right; margin-top: 160px; margin-right: 7px;} */
+button{
+   position: absolute;
+   right : 7px;
+   bottom : -55px;
+}

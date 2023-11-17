@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <script>
+      //json(javascript object notation - 자바스크립트 객체)
+      /*
+         let 객체명 = {
+            속성명 : 속성값,
+            속성명 : 속성값
+         }
+      */
+      let person = {
+         name : "김희린",
+         age : 25,
+         isMerried : false,
+
+         play : function() {  //객체의 소속 - 함수
+            alert("밥 먹는 중");
+         }
+      }
+
+      //person 객체 사용
+      //객체명.속성 | 객체명.함수()
+      console.log(person.name);
+      document.write(person.name + '<br>');
+      document.write(person.age + '<br>');
+      document.write("결혼 유무 : " + person.isMerried + '<br>')
+
+      //객체의 함수 사용
+      person.play();
+   </script>
+</body>
+</html>
