@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>이미지 태그 생성</title>
+</head>
+<body>
+   <div id="wrap">
+      <h2>카누 미니 아메리카노</h2>
+      <a href="#" onclick ="addImg(); this.onclick=''">더보기</a>
+      <div id = "info"></div>
+
+      <script>
+         function addImg(){
+            let p = document.createElement("p");
+            let text = document.createTextNode("산뜻한 과일향의 마일드 로스트");
+            
+            p.appendChild(text);
+
+            //img 태그 - 속성
+            let img = document.createElement("img");
+            let src = document.createAttribute("src");   //속성
+            let alt = document.createAttribute("alt");
+
+            src.value = "images/kanu.jpg";   //속성값
+            alt.value = "카누";
+
+            img.setAttributeNode(src);  //img에 src 속성 붙임
+            img.setAttributeNode(alt); 
+
+            let div = document.getElementById("info");
+            div.appendChild(p);  //부모 요소 <div>에 자식 요소 <p> 연결
+            div.appendChild(img);
+         }
+      </script>
+   </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>위치 기반 탐색</title>
+   <script src = "js/jquery-3.7.1.js"></script>
+   <style>
+      .content{width: 800px; margin: 0 auto;}
+      .wrap *{ /* .warp, ul, li, span*/
+         display: block;
+         border: 2px solid #ddd;
+         margin : 16px;
+         color: lightgray;
+         padding: 5px;
+      }
+   </style>
+   <script>
+      $(document).ready(function(){
+         //$("span").parent().css("color", "red");                                     //1개 적용할 때
+         //$("span").parent().css({"color": "red", "border": "2px solid blue"});       //여러가지 적용할 때
+         $("span").parent().next().css({"color": "red", "border": "2px solid blue"});  //.next() : span 태그 부모의 다음 요소
+         
+         //ul의 자식 요소
+         $("ul").children().css("color", "pink");
+
+         //ul 하위의 span 태그 찾기
+         
+         $("ul").find("span").css({"color": "blue", "font-weight": "bold"});
+      })
+   </script>
+</head>
+<body>
+   <div class = "content">
+      <div class = "wrap">
+         <ul>ul(grandparent)
+            <li>li(direcet parent)
+               <span>span</span>
+            </li>
+            <li>li(parent)</li>
+            <li>li(parent)</li>
+         </ul>
+      </div>
+   </div>
+</body>
+</html>
